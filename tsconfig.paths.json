@@ -8,11 +8,17 @@
       "@icons": ["./assets/icons"],
       "@icons/*": ["./assets/icons/*"],
 
+      "@misc": ["./assets/misc"],
+      "@misc/*": ["./assets/misc/*"],
+
       "@components": ["./components"],
       "@components/*": ["./components/*"],
 
       "@helpers": ["./helpers"],
       "@helpers/*": ["./helpers/*"],
+
+      "@views": ["./views"],
+      "@views/*": ["./views/*"],
 
       "@styles": ["./styles"],
       "@styles/*": ["./styles/*"]
