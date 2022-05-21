@@ -24,6 +24,6 @@ git commit -m 'deploy: gh-pages'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:ktim816/<REPO>.git main:gh-pages
+git push -f git@github.com:ktim816/space-tourism-multipage-website.git main:gh-pages
 
 cd -

@@ -1,6 +1,6 @@
 html,
 body {
-  @apply min-h-screen text-base;
+  @apply min-h-screen text-body text-lavender-blue bg-rich-black;
 }
 
 html {
@@ -16,4 +16,13 @@ html {
 a,
 span {
   @apply inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply uppercase;
 }

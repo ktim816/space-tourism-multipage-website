@@ -1,7 +1,7 @@
 {
-  "name": "interactive-rating-component",
+  "name": "space-tourism-multipage-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "clean": "rm -rf ./dist",
@@ -10,7 +10,11 @@
     "deploy": "bash ./deploy.sh"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "@headlessui/vue": "^1.6.2",
+    "@types/gsap": "^3.0.0",
+    "gsap": "^3.10.4",
+    "vue": "^3.2.25",
+    "vue-router": "4.0.15"
   },
   "devDependencies": {
     "@types/node": "^17.0.30",
