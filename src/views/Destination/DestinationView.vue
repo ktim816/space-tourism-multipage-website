@@ -4,7 +4,7 @@
       <div :class="[$style.col1]">
         <BaseTitle data-content="01">Pick your destination</BaseTitle>
         <div :class="[$style.sphere]">
-          <img alt="" ref="sphere" :src="destinations[currentTab].images.png" />
+          <img alt="" ref="sphere" :src="destinations[currentTab].image" />
         </div>
       </div>
       <TabsGroup :class="[$style.tabs]" @change="changeTab">
@@ -44,9 +44,9 @@
 </template>
 
 <script lang="ts" setup>
-import {onMounted, onUpdated, ref, watch} from 'vue';
+import {onMounted, ref, watch} from 'vue';
 import {gsap} from 'gsap';
-import data from '@misc/data.json';
+import data from './data';
 import MainButton from '@components/MainButton.vue';
 import TabsGroup from '@components/Tabs/TabsGroup.vue';
 import TabsList from '@components/Tabs/TabsList.vue';
@@ -58,7 +58,7 @@ import BaseTitle from '@components/BaseTitle.vue';
 const currentTab = ref(0);
 const panels = ref(null);
 const sphere = ref(null);
-const destinations = ref(data.destinations);
+const destinations = ref(data);
 
 function changeTab(payload: any) {
   currentTab.value = payload;
@@ -78,9 +78,6 @@ watch(currentTab, animateView);
 </script>
 
 <style lang="scss" module>
-.wrapper {
-  @apply bg-destination-desktop;
-}
 .sphere {
   @apply pl-16;
 }

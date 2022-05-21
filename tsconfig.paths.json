@@ -8,9 +8,6 @@
       "@icons": ["./assets/icons"],
       "@icons/*": ["./assets/icons/*"],
 
-      "@misc": ["./assets/misc"],
-      "@misc/*": ["./assets/misc/*"],
-
       "@components": ["./components"],
       "@components/*": ["./components/*"],
 

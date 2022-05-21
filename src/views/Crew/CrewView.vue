@@ -24,7 +24,7 @@
           </SliderPagination>
         </SliderGroup>
       </div>
-      <img ref="person" :src="crewData[currentTab].images.png" alt="" />
+      <img ref="person" :src="crewData[currentTab].image" alt="" />
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@
 <script lang="ts" setup>
 import {gsap} from 'gsap';
 import {onMounted, ref, watch} from 'vue';
-import data from '@misc/data.json';
+import data from './data';
 import MainButton from '@components/MainButton.vue';
 import SliderGroup from '@components/Slider/SliderGroup.vue';
 import SliderPagination from '@components/Slider/SliderPagination.vue';
@@ -44,7 +44,7 @@ import BaseTitle from '@components/BaseTitle.vue';
 const slides = ref(null);
 const person = ref(null);
 const currentTab = ref(0);
-const crewData = ref(data.crew);
+const crewData = ref(data);
 
 function changeTab(payload: any) {
   currentTab.value = payload;
@@ -60,9 +60,6 @@ watch(currentTab, animateView);
 </script>
 
 <style lang="scss" module>
-.wrapper {
-  @apply bg-crew-desktop;
-}
 .pagination {
   @apply pt-14 mt-auto;
 }

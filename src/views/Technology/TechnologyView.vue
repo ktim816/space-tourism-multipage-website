@@ -48,7 +48,7 @@
 <script lang="ts" setup>
 import {gsap} from 'gsap';
 import {onMounted, ref, watch} from 'vue';
-import data from '@misc/data.json';
+import data from './data';
 import MainButton from '@components/MainButton.vue';
 import SliderGroup from '@components/Slider/SliderGroup.vue';
 import SliderPagination from '@components/Slider/SliderPagination.vue';
@@ -59,7 +59,7 @@ import SliderSlide from '@components/Slider/SliderSlide.vue';
 const image = ref(null);
 const slides = ref(null);
 const currentTab = ref(0);
-const technologyData = ref(data.technology);
+const technologyData = ref(data);
 
 function changeTab(payload: any) {
   currentTab.value = payload;
@@ -75,9 +75,6 @@ watch(currentTab, animateView);
 </script>
 
 <style lang="scss" module>
-.wrapper {
-  @apply bg-technology-desktop;
-}
 .image {
   @apply mt-[3.75rem];
 }

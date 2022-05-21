@@ -40,9 +40,6 @@ onMounted(animateView);
 </script>
 
 <style lang="scss" module>
-.wrapper {
-  @apply bg-home-desktop;
-}
 .container {
   @apply flex justify-between items-end space-x-20 px-[165px] pt-[15.6875rem] pb-[8.1875rem] mt-auto;
 }
